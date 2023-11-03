@@ -1,0 +1,8 @@
+CREATE TABLE EmployeeSkills_T(
+	EmployeeID VARCHAR(10) NOT NULL,
+    SkillID VARCHAR(12) NOT NULL,
+CONSTRAINT EmployeeSkills_PK PRIMARY KEY (EmployeeID, SkillID),
+CONSTRAINT EmployeeSkills_FK1 FOREIGN KEY (EmployeeID) REFERENCES
+Employee(EmployeeID),
+CONSTRAINT EmployeeSkills_FK2 FOREIGN KEY (SkillID) REFERENCES
+Skill(SkillID));
